@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecf0f1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  border-radius: 2%;
+  background-image: radial-gradient(circle, #344d67, #33647e, #317c92, #3494a0, #45acaa, #52baac, #63c7ac, #79d4aa, #84d9a5, #90de9f, #9ee399, #ade792);
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-bottom: 20px;
+}
+.profile-container img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+.link-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 8px;
+  max-height: 50vh;
+}
+.link-container button {
+  background-color: #bceb7e;
+  border: none;
+  padding: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+}
+.link-container button:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #f3ecb0;
+  color: black;
+}
+
+/* icons */
+
+.fa-instagram {
+  background: linear-gradient(to bottom, #405de6, #5b51d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-youtube {
+  color: #ff0000;
+}
+
+.fa-facebook-f {
+  color: #4267b2;
+}
+
+.fa-whatsapp {
+  color: #25d366;
+}
+
+.fa-linkedin-in {
+  color: #0a66c2;
+}
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ecf0f1;
+}
+
+.loader .loader-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.loader span {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  animation: loading 2s ease infinite;
+}
+
+.loader span:nth-child(1) {
+  background: #6eccaf;
+  animation-delay: 0.5s;
+}
+
+.loader span:nth-child(2) {
+  background: #ade792;
+  animation-delay: 1s;
+}
+
+.loader span:nth-child(3) {
+  background: #f3ecb0;
+  animation-delay: 1.5s;
+}
+
+.loader span:nth-child(4) {
+  background: #344d67;
+  animation-delay: 2s;
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(80px);
+  }
+
+  50% {
+    transform: translate(80px, 80px);
+  }
+
+  75% {
+    transform: translate(0, 80px);
+  }
+}
+
+.loader.fadeOut {
+  animation: fadeOut 1s alternate;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
